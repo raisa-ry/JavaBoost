@@ -1,4 +1,4 @@
-package multithreading;
+package org.example.multithreading;
 
 import org.example.multithreading.immutability.Address;
 import org.example.multithreading.immutability.Hobby;
