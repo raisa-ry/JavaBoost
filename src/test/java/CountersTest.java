@@ -1,5 +1,3 @@
-package benchmarks;
-
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.atomic.AtomicLong;
