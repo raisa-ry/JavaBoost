@@ -22,33 +22,29 @@ public class PluginLoader extends URLClassLoader {
 
         synchronized (getClassLoadingLock(name)) {
 
-            Class<?> c = findLoadedClass(name);
+            Class<?> clazz = findLoadedClass(name);
 
-            if (c == null) {
+            if (clazz == null) {
 
                 if (name.startsWith("java.") || name.startsWith("jdk.")) {
                     return super.loadClass(name, resolve);
-                }
-
-                if (isClassExist(name)) {
-                    c = findClass(name);
+                } else if (isClassExists(name)) {
+                    clazz = findClass(name);
                 } else {
-                    c = getParent().loadClass(name);
+                    clazz = getParent().loadClass(name);
                 }
             }
 
             if (resolve) {
-                resolveClass(c);
+                resolveClass(clazz);
             }
-            return c;
+            return clazz;
         }
     }
 
-    private boolean isClassExist(String name) {
+    private boolean isClassExists(String name) {
         String resourcePath = name.replace('.', '/').concat(".class");
         return findResource(resourcePath) != null;
     }
 
 }
-
-
