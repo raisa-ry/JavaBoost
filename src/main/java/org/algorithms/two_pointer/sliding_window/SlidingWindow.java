@@ -1,4 +1,4 @@
-package org.algorithms.sliding_window;
+package org.algorithms.two_pointer.sliding_window;
 
 import java.util.HashSet;
 import java.util.Set;

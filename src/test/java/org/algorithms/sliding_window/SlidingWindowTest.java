@@ -1,5 +1,6 @@
 package org.algorithms.sliding_window;
 
+import org.algorithms.two_pointer.sliding_window.SlidingWindow;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
