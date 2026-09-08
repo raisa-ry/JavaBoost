@@ -1,5 +1,6 @@
 package org.algorithms.two_pointer;
 
+import org.algorithms.two_pointers.TwoSumSortedArray;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

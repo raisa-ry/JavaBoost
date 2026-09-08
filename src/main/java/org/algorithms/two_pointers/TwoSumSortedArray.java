@@ -1,4 +1,4 @@
-package org.algorithms.two_pointer;
+package org.algorithms.two_pointers;
 
 public class TwoSumSortedArray {
 
